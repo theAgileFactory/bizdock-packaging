@@ -61,20 +61,11 @@
 	</distributionManagement>
 
 	<dependencies>
-
             <dependency>
                 <groupId>${play.app.groupId}</groupId>
                 <artifactId>${play.app.artifactId}</artifactId>
                 <version>${play.app.version}</version>
 		        <type>zip</type>
-            </dependency>
-
-	    <!-- enterprise dependencies -->
-
-	    <dependency>
-              <groupId>${defaultplugins.extension.groupId}</groupId>
-              <artifactId>${defaultplugins.extension.artifactId}</artifactId>
-              <version>${defaultplugins.extension.version}</version>
             </dependency>
 	</dependencies>
 
