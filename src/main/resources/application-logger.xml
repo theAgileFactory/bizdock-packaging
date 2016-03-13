@@ -1,0 +1,87 @@
+<configuration>
+
+	<conversionRule conversionWord="coloredLevel"
+		converterClass="play.api.Logger$ColoredLevel" />
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        	<file>${com.agifac.maf.packaging.maf-desktop.log.folder}/application.log</file>
+        	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            		<fileNamePattern>${com.agifac.maf.packaging.maf-desktop.log.folder}/application.%d{yyyy-MM-dd}.log</fileNamePattern>
+        	</rollingPolicy>
+        	<encoder>
+            		<pattern>%date - [%level] - from %logger in %thread %message%n%xException%n</pattern>
+        	</encoder>
+    	</appender>
+
+
+	<appender name="FILE_AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${com.agifac.maf.packaging.maf-desktop.log.folder}/audit.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${com.agifac.maf.packaging.maf-desktop.log.folder}/audit.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>60</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date - [%level] - from %logger in %thread %message%n%xException%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="SYSTEM_AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${com.agifac.maf.packaging.maf-desktop.log.folder}/sysadmin.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${com.agifac.maf.packaging.maf-desktop.log.folder}/sysadmin.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date - [%level] - from %logger in %thread %message%n%xException%n</pattern>
+        </encoder>
+    </appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date - [%level] - from %logger in %thread %message%n%xException%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="play" level="${com.agifac.maf.packaging.maf-desktop.logger.play.level}" />
+	<logger name="application" level="${com.agifac.maf.packaging.maf-desktop.logger.application.level}" />
+	<logger name="logger.tools" level="${com.agifac.maf.packaging.maf-desktop.logger.audit.level}" />
+	<logger name="be.objectify.deadbolt.java.ExecutionContextProvider" level="ERROR" />
+	
+	<logger name="org.xeustechnologies.jcl" level="DEBUG" />
+	
+	<!-- Framework specific loggers -->
+	<!-- Global logger for framework services -->
+	<logger name="framework.services" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.global.level}" />
+	
+	<!-- Security and authentication -->
+	<logger name="framework.security" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.security.level}" />
+	<logger name="framework.services.account" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.security.level}" />
+	<logger name="framework.services.session" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.security.level}" />
+	
+	<!-- APIs -->
+	<logger name="framework.services.api" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.api.level}" />
+	
+	<!-- System and scheduler -->
+	<logger name="framework.services.system" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.sysconfig.level}" />
+	<logger name="framework.services.job" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.sysconfig.level}" />
+	<logger name="framework.services.database" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.sysconfig.level}" />
+	<logger name="framework.services.configuration" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.sysconfig.level}" />
+	
+	<!-- Plugins and extensions -->
+	<logger name="framework.services.ext" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.plugext.level}" />
+	<logger name="framework.services.actor" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.plugext.level}" />
+	<logger name="framework.services.plugins" level="${com.agifac.maf.packaging.maf-desktop.logger.framework.plugext.level}" />
+	<!-- Framework specific loggers (end) -->
+	
+	<logger name="framework.services.audit.AuditLoggerServiceImpl" level="INFO">
+		<appender-ref ref="FILE_AUDIT" />
+	</logger>
+    <logger name="framework.services.system.SysAdminUtilsImpl" level="INFO">
+        <appender-ref ref="SYSTEM_AUDIT" />
+    </logger>
+
+  <root level="${com.agifac.maf.packaging.maf-desktop.logger.root.level}">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>
