@@ -10,11 +10,6 @@
         <outputDirectory>play-apps</outputDirectory>
         <destName>${play.app.artifactId}-dist.zip</destName>
     </file>
-	<file>
-        <source>${project.build.directory}/dependency/${defaultplugins.extension.artifactId}-${defaultplugins.extension.version}.jar</source>
-        <outputDirectory>extensions</outputDirectory>
-        <destName>${defaultplugins.extension.artifactId}.jar</destName>
-    </file>
     <file>
         <source>src/main/resources/environment.conf</source>
         <outputDirectory>conf</outputDirectory>

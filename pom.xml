@@ -42,10 +42,6 @@
 		<maven-assembly-plugin.version>2.2.1</maven-assembly-plugin.version>
         <maven-site-plugin.version>3.4</maven-site-plugin.version>
         <wagon-ssh.version>2.2</wagon-ssh.version>
-	<!-- Extensions properties -->
-	<defaultplugins.extension.groupId>com.agifac.lib</defaultplugins.extension.groupId>
-	<defaultplugins.extension.artifactId>maf-defaultplugins-extension</defaultplugins.extension.artifactId>
-	<defaultplugins.extension.version>11.0.0</defaultplugins.extension.version>
 	</properties>
 
 	<distributionManagement>
