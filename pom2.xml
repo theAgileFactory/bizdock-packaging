@@ -30,6 +30,19 @@
 			<email>dev@pycloux.com</email>
 		</developer>
 	</developers>
+	
+	<repositories>
+		<repository>
+			<id>typesafe</id>
+			<name>typesafe-releases</name>
+			<url>http://repo.typesafe.com/typesafe/releases/</url>
+		</repository>
+		<repository>
+            <id>sonatype-snapshots</id>
+            <name>sonatype-snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository> 
+	</repositories>
 
 	<properties>
 		<project.build.sourceEncoding>latin1</project.build.sourceEncoding>
