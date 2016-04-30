@@ -38,7 +38,7 @@
 		<play.app.groupId>com.agifac.maf.desktop</play.app.groupId>
 		<play.app.artifactId>maf-desktop-app</play.app.artifactId>
 		<play.app.distSuffix>dist</play.app.distSuffix>
-		<play.app.version>12.1.2</play.app.version>
+		<play.app.version>12.1.4-SNAPSHOT</play.app.version>
 		<!-- Plugin properties -->
 		<maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
 		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
@@ -62,6 +62,11 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
+		<repository>
+            <id>sonatype-snapshots</id>
+            <name>sonatype-snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>   
 	</distributionManagement>
 
 	<dependencies>
@@ -240,16 +245,13 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.5</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
+			
+			<plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>versions-maven-plugin</artifactId>
+		        <version>2.2</version>
+		    </plugin>
 		</plugins>
 	</build>
 </project>
