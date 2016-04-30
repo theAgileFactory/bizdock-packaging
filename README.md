@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/theAgileFactory/bizdock-packaging.svg?branch=master)](https://travis-ci.org/theAgileFactory/bizdock-packaging)
+
 # bizdock-packaging
 A project to be used to "package" BizDock application.
 
