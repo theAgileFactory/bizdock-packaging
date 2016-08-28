@@ -7,6 +7,7 @@
 	<name>BizDock application packager</name>
 	<description>This module is an assembly which package BizDock for deployment</description>
 	<packaging>pom</packaging>
+	
 	<url>https://github.com/theAgileFactory</url>
 
 	<licenses>
