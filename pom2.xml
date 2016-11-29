@@ -95,6 +95,11 @@
 			<version>${play.app.version}</version>
 			<type>zip</type>
 		</dependency>
+		<dependency>
+			<groupId>com.agifac.lib</groupId>
+			<artifactId>maf-defaultplugins-extension</artifactId>
+			<version>${lib.maf-defaultplugins-extension.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
