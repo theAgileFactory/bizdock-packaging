@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.agifac.maf.packaging</groupId>
 	<artifactId>maf-desktop</artifactId>
-	<version>14.0.1</version> 
+	<version>14.0.2</version> 
 	<name>BizDock application packager</name>
 	<description>This module is an assembly which package BizDock for deployment</description>
 	<packaging>pom</packaging>
