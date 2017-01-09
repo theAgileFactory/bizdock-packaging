@@ -58,7 +58,7 @@
 		<play.app.artifactId>maf-desktop-app</play.app.artifactId>
 		<play.app.distSuffix>dist</play.app.distSuffix>
 		<play.app.version>14.0.7</play.app.version>
-		<maf-defaultplugins-extension.version>14.0.7</maf-defaultplugins-extension.version>
+		<maf-defaultplugins-extension.version>14.0.6</maf-defaultplugins-extension.version>
 		<!-- Plugin properties -->
 		<maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
 		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
