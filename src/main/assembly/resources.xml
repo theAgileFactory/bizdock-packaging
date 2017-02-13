@@ -24,6 +24,7 @@
         <source>src/main/resources/application.conf</source>
         <outputDirectory>conf</outputDirectory>
         <destName>application.conf</destName>
+        <filtered>true</filtered>
     </file>
     <file>
         <source>src/main/resources/application-logger.xml</source>
