@@ -103,7 +103,7 @@
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>com.agifac.lib</groupId>
+			<groupId>com.sword-group.bizdock.lib</groupId>
 			<artifactId>maf-defaultplugins-extension</artifactId>
 			<version>${maf-defaultplugins-extension.version}</version>
 		</dependency>
