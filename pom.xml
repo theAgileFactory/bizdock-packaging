@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sword-group.bizdock.packaging</groupId>
 	<artifactId>maf-desktop</artifactId>
-	<version>17.0.4-SNAPSHOT</version>
+	<version>17.1.0-SNAPSHOT</version>
 	<name>BizDock application packager</name>
 	<description>This module is an assembly which package BizDock for deployment</description>
 	<packaging>pom</packaging>
@@ -62,8 +62,8 @@
 		<play.app.groupId>com.sword-group.bizdock.desktop</play.app.groupId>
 		<play.app.artifactId>maf-desktop-app</play.app.artifactId>
 		<play.app.distSuffix>dist</play.app.distSuffix>
-		<play.app.version>17.0.4-SNAPSHOT</play.app.version>
-		<maf-defaultplugins-extension.version>17.0.4-SNAPSHOT</maf-defaultplugins-extension.version>
+		<play.app.version>17.1.0-SNAPSHOT</play.app.version>
+		<maf-defaultplugins-extension.version>17.1.0-SNAPSHOT</maf-defaultplugins-extension.version>
 		<!-- Plugin properties -->
 		<maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
 		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
